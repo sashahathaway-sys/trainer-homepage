@@ -1,0 +1,118 @@
+<!--
+  WIDGET: Trainer Dashboard Hero
+  Paste this entire block into Docebo Homepage Builder > Add Widget > HTML/WYSIWYG
+-->
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ─── Reset & Tokens ─── */
+  .td-hero *, .td-hero *::before, .td-hero *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .td-hero {
+    --blue: #01C4F6;
+    --navy: #101E2B;
+    --text: #ffffff;
+    --text-muted: rgba(255,255,255,0.5);
+    --inverted: #0B1114;
+    --font-head: 'Cera Pro', 'Open Sans', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --radius: 10px;
+
+    font-family: var(--font-body);
+    background: url('../assets/blue-background.png') center center / cover no-repeat;
+    color: var(--text);
+    border-radius: var(--radius);
+    padding: 40px 70px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ─── Layout ─── */
+  .td-hero__inner {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ─── Logo Column ─── */
+  .td-hero__logo-col {
+    flex-shrink: 0;
+    width: 200px;
+  }
+
+  .td-hero__logo-img {
+    width: 200px;
+    height: auto;
+    display: block;
+  }
+
+  /* ─── Text Column ─── */
+  .td-hero__text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .td-hero__label {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    letter-spacing: 0.02em;
+  }
+
+  .td-hero__subhead {
+    font-family: var(--font-head);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1.4;
+  }
+
+  .td-hero__title {
+    font-family: var(--font-head);
+    font-size: clamp(32px, 3.5vw, 48px);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.2;
+    letter-spacing: -0.96px;
+    margin-top: 8px;
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 1100px) {
+    .td-hero { padding: 32px 40px; }
+    .td-hero__inner { gap: 40px; }
+  }
+
+  @media (max-width: 768px) {
+    .td-hero { padding: 24px 20px; }
+    .td-hero__inner { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+    .td-hero__logo-col { width: 140px; }
+    .td-hero__logo-img { width: 140px; }
+  }
+</style>
+
+<div class="td-hero">
+  <div class="td-hero__inner">
+
+    <!-- ── Left: Logo ── -->
+    <div class="td-hero__logo-col">
+      <img class="td-hero__logo-img"
+           alt="Winning by Design"
+           src="../assets/WbD W logo 1.png">
+    </div>
+
+    <!-- ── Text ── -->
+    <div class="td-hero__text">
+      <p class="td-hero__label">TRAINING FOR MODERN GTM TEAMS</p>
+      <p class="td-hero__subhead">Trainer Dashboard</p>
+      <h1 class="td-hero__title">Welcome back!</h1>
+    </div>
+
+  </div>
+</div>
